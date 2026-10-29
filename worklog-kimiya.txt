@@ -1,3 +1,16 @@
+#Added by hand: I ran git clone before creating my log file
+#The result of cloning into 'CELIK_YOUNESI_GARCIA' 
+ 
+Cloning into 'CELIK_YOUNESI_GARCIA'...
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (17/17), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 17 (delta 7), reused 12 (delta 4), pack-reused 0 (from 0)
+Receiving objects: 100% (17/17), 7.47 KiB | 3.73 MiB/s, done.
+Resolving deltas: 100% (7/7), done
+
+
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
