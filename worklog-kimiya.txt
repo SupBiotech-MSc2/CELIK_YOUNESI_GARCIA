@@ -32,7 +32,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 
 ------------------------------------------------------------------------------------------------------------------------------------------
-#4.(I put the cooments ans results of the code amnually here):
+#4.(I put the comments and results of the code manually here):
 Secssion1: Check point: I checked the commit-history with git log --online. My local copy has all five commits from GitHub, not just the files. 
 
 6819f67 feat: add team note from clkaze08
@@ -91,7 +91,100 @@ After doing this, you may fix the identity used for this commit with:
 
  1 file changed, 3 insertions(+)
 ----------------------------------------------------------------------------------------------------------------------------------------
-#
+
+#8.The comments for this code and also the results of it added manually):
+# git show 698cb03 (my Section 2 commit):
+# - Author: me (kimiya), Oct 29 2026
+# - Message: feat: add team notes from kyounesi
+# - @@ -22,4 +22,7 @@: the Team Notes section grew from 4 to 7 lines
+# - Lines with + : I added my Team Notes line and 2 empty lines (3 insertions)
+
+commit 698cb0385a5bac36ccb04e4e7fc4c1c1e434ab00 (HEAD -> main)
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Thu Oct 29 18:56:48 2026 +0100
+
+    feat: add team notes from kyounesi
+
+diff --git a/protocol.md b/protocol.md
+index 28b55e7..17df581 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -22,4 +22,7 @@ screening.
+ 
+ ## Team Notes
+ <!-- add your own line below, one per teammate --> clkaze08: test.note.test
++Kyounesi: I reviewed all the project continue to add part two and three and go further
++
++
+----------------------------------------------------------------------------------------------------------------------------------------
+#9. The results of adding the git push origin main 2>&1 | tee -a worklog-kimiya.txt 
+#(I added the comments of the code manually here:
+# Session3: I pushed my team notes commits GitHub.6819f67..698cb03 main -> main means GitHub moved from clkaze08's last commit to mine. It was not rejected because my local copy was already up to date.
+
+git push origin main 2>&1 | tee -a worklog-kimiya.txt
+Username for 'https://github.com': kyounesi
+Password for 'https://kyounesi@github.com': 
+To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
+   6819f67..698cb03  main -> main
+----------------------------------------------------------------------------------------------------------------------------------------
+#10.(The results and comments of this part the code added manually): After typing : git pull origin main 2>&1 | tee -a worklog-kimiya.txt
+
+#Session3 : I pulled from GitHub to get my teammates' latest work. "branch main -> FETCH_HEAD" means git downloaded the latest version of main from GitHub.
+
+From https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+ * branch            main       -> FETCH_HEAD
+*Already up to date.
+----------------------------------------------------------------------------------------------------------------------------------------
+#11. The comments and results of this part added manually: after adding letters in the file protocol.md and checking the code 
+git status | tee -a worklog-kimiya.txt
+
+# git status after editing my Team Notes line again: protocol.md is modified but not staged yet.
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-kimiya.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+---------------------------------------------------------------------------------------------------------------------------------------
+#12. The comments added manually: After typing two codes of git add protocol.md and git commit -m "docs:update team note |
+tee -a worklog-kimiya.txt
+
+# I staged and committed my updated Team Notes line (commit d53f4f6, type docs). 1 file changed, 3 lines added to protocol.md.
+
+[main d53f4f6] docs:update team note
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+-----------------------------------------------------------------------------------------------------------------------------------------
+#13. The comments of this part added manually(which means that after typing git push 2>&1 | tee -a worklog-kimiya.txt
+# Pushed my updated Team Notes commit to GitHub. 698cb03..d53f4f6 main -> main means GitHub's main moved from my first note commit to the new one. Push accepted.
+
+To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
+   698cb03..d53f4f6  main -> main
+-----------------------------------------------------------------------------------------------------------------------------------------
+#14. In this part I have started to create my worklog-kimiya.txt
+
+
 
 To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
    6819f67..698cb03  main -> main
@@ -111,20 +204,5 @@ Untracked files:
 	worklog-kimiya.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
-[main d53f4f6] docs:update team note
- Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly. Run the
-following command and follow the instructions in your editor to edit
-your configuration file:
 
-    git config --global --edit
 
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 1 file changed, 3 insertions(+)
-To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
-   698cb03..d53f4f6  main -> main
