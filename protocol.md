@@ -23,9 +23,6 @@ screening.
 ## Team Notes
 <!-- add your own line below, one per teammate --> clkaze08: test.note.test
 Kyounesi: I reviewed all the project continue to add part two and three and go further
-Kyounesi: I have pushed what I have already type in the main branch
-Kyounesi:I have pull the others work to my local: it has already updated.(Its in process to add new thing)
-
 
 
 
