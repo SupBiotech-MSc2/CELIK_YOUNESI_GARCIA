@@ -22,7 +22,4 @@ screening.
 
 ## Team Notes
 <!-- add your own line below, one per teammate --> clkaze08: test.note.test
-Kyounesi: I reviewed all the project continue to add part two and three and go further
-
-
 
