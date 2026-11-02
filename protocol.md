@@ -13,6 +13,7 @@ screening.
 - Electroporation buffer
 - HEK293 cells, passage < 20
 - Non targeting-control sgRNA
+-Cell viability dye(for example trypan blue)
 
 ## Steps
 1. Design and order sgRNA targeting exon 2 of the gene of interest.
@@ -29,6 +30,8 @@ Kyounesi: I reviewed all the project continue to add part two and three and go f
 Kyounesi: I want to test for the comment get diff.
 
 Kyounesi: I want to see the changes by using git diff protocol.md
+
+
 
 
 
