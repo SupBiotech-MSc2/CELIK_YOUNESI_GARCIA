@@ -21,6 +21,14 @@ screening.
 5. Validate editing efficiency by amplicon sequencing.
 
 ## Team Notes
-<!-- add your own line below, one per teammate -->
+<!-- add your own line below, one per teammate --> clkaze08: test.note.test
+
+Kyounesi: I reviewed all the project continue to add part two and three and go further
+
+Kyounesi: I want to test for the comment get diff.
+
+Kyounesi: I want to see the changes by using git diff protocol.md
+
+
 
 Daniel: Here is my line
