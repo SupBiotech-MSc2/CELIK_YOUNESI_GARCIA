@@ -1,3 +1,5 @@
+#1.
+
 #Added by hand: I ran git clone before creating my log file
 #The result of cloning into 'CELIK_YOUNESI_GARCIA' 
  
@@ -8,8 +10,8 @@ remote: Compressing objects: 100% (12/12), done.
 remote: Total 17 (delta 7), reused 12 (delta 4), pack-reused 0 (from 0)
 Receiving objects: 100% (17/17), 7.47 KiB | 3.73 MiB/s, done.
 Resolving deltas: 100% (7/7), done
-
-
+------------------------------------------------------------------------------------------------------------------------------------------
+#2.#Session1: First git status after cloning. My copy is up to date with GitHub. worklog kimiya.txt is new, so got does not track it yet.
 
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -19,11 +21,32 @@ Untracked files:
 	worklog-kimiya.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
+-------------------------------------------------------------------------------------------------------------------------------------------
+#3.(I put the comment and results of this code manually). I used cat to check my log file. It contains the output of my first git status: my branch is uptodate, and worklog-kimiya.txt is still untracked.
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-kimiya.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+#4.(I put the comments and results of the code manually here):
+Secssion1: Check point: I checked the commit-history with git log --online. My local copy has all five commits from GitHub, not just the files. 
+
 6819f67 feat: add team note from clkaze08
 dc29fe9 testtestest
 f09bb0d feat: update protocol
 2438741 feat: add team note from clkaze08
 671f0e6 Initial commit
+-----------------------------------------------------------------------------------------------------------------------------------------
+#5.(The comment and what I have typed as an input added manually): After type (git status | tee -a worklog-kimiya.txt) 
+
+#Session2: After adding my team notes line, git status shows protocol.md as modified (not staged yet).
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -37,6 +60,9 @@ Untracked files:
 	worklog-kimiya.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+---------------------------------------------------------------------------------------------------------------------------------------
+#6.Session2: git add protocol.md, git status shows protocol.md under "Changes to be committed", so it is now staged and ready to commit.
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -47,6 +73,9 @@ Changes to be committed:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 	worklog-kimiya.txt
+------------------------------------------------------------------------------------------------------------------------------------------
+#7.Here the comments for this specific code only added manually):
+#Session2: First commit done((698cb03). One file changed and three lines added to protocol.md. Also here we observe that my name or Email were set automatically. 
 
 [main 698cb03] feat: add team notes from kyounesi
  Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
@@ -63,11 +92,54 @@ After doing this, you may fix the identity used for this commit with:
     git commit --amend --reset-author
 
  1 file changed, 3 insertions(+)
+----------------------------------------------------------------------------------------------------------------------------------------
+#8.The comments for this code and also the results of it added manually):
+# git show 698cb03 (my Section 2 commit):
+# - Author: me (kimiya), Oct 29 2026
+# - Message: feat: add team notes from kyounesi
+# - @@ -22,4 +22,7 @@: the Team Notes section grew from 4 to 7 lines
+# - Lines with + : I added my Team Notes line and 2 empty lines (3 insertions)
+
+commit 698cb0385a5bac36ccb04e4e7fc4c1c1e434ab00 (HEAD -> main)
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Thu Oct 29 18:56:48 2026 +0100
+
+    feat: add team notes from kyounesi
+
+diff --git a/protocol.md b/protocol.md
+index 28b55e7..17df581 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -22,4 +22,7 @@ screening.
+ 
+ ## Team Notes
+ <!-- add your own line below, one per teammate --> clkaze08: test.note.test
++Kyounesi: I reviewed all the project continue to add part two and three and go further
++
++
+----------------------------------------------------------------------------------------------------------------------------------------
+#9. The results of adding the git push origin main 2>&1 | tee -a worklog-kimiya.txt 
+#(I added the comments of the code manually here:
+# Session3: I pushed my team notes commits GitHub.6819f67..698cb03 main -> main means GitHub moved from clkaze08's last commit to mine. It was not rejected because my local copy was already up to date.
+
+Username for 'https://github.com': kyounesi
+Password for 'https://kyounesi@github.com': 
 To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
    6819f67..698cb03  main -> main
+----------------------------------------------------------------------------------------------------------------------------------------
+#10.(The comments of this part added manually): After typing : git pull origin main 2>&1 | tee -a worklog-kimiya.txt
+
+#Session3 : I pulled from GitHub to get my teammates' latest work. "branch main -> FETCH_HEAD" means git downloaded the latest version of main from GitHub.
+
 From https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
  * branch            main       -> FETCH_HEAD
-Already up to date.
+*Already up to date.
+----------------------------------------------------------------------------------------------------------------------------------------
+#11. The comments and results of this part added manually: after adding letters in the file protocol.md and checking the code 
+git status | tee -a worklog-kimiya.txt
+
+# git status after editing my Team Notes line again: protocol.md is modified but not staged yet.
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -81,6 +153,13 @@ Untracked files:
 	worklog-kimiya.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+
+---------------------------------------------------------------------------------------------------------------------------------------
+#12. The comments added manually: After typing two codes of git add protocol.md and git commit -m "docs:update team note |
+tee -a worklog-kimiya.txt
+
+# I staged and committed my updated Team Notes line (commit d53f4f6, type docs). 1 file changed, 3 lines added to protocol.md.
+
 [main d53f4f6] docs:update team note
  Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
 Your name and email address were configured automatically based
@@ -96,5 +175,843 @@ After doing this, you may fix the identity used for this commit with:
     git commit --amend --reset-author
 
  1 file changed, 3 insertions(+)
+-----------------------------------------------------------------------------------------------------------------------------------------
+#13. The comments of this part added manually(which means that after typing git push 2>&1 | tee -a worklog-kimiya.txt
+# Pushed my updated Team Notes commit to GitHub. 698cb03..d53f4f6 main -> main means GitHub's main moved from my first note commit to the new one. Push accepted.
+
 To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
    698cb03..d53f4f6  main -> main
+-----------------------------------------------------------------------------------------------------------------------------------------
+#14. The comment added manually
+#In this part I have started to create my worklog-kimiya.txt(Because I forgot to run it firstly). So, I tried created my own worklog history. After typing the codes git add and also git commit -m "docs:add worklog from kyounesi":
+
+## Added by hand: I staged and committed my worklog for the first time (commit 76b643d, 87 lines). "create mode" means it is a new file in the repo.
+
+[main 76b643d] docs:add worklog from kyounesi
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 87 insertions(+)
+ create mode 100644 worklog-kimiya.txt
+------------------------------------------------------------------------------------------------------------------------------------------
+#15.The comments and the results have been added manually). After typing the code  git push origin main:
+
+## Added by hand: I pushed my worklog commit to GitHub. d53f4f6..76b643d main -> main means the push was accepted and my 
+worklog is now on GitHub.
+ 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.11 KiB | 1.11 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
+   d53f4f6..76b643d  main -> main
+-------------------------------------------------------------------------------------------------------------------------------------------
+#16. The comment and the code below have been added manually:(By typin the code git status | tee -a worklog-kimiya.txt:
+
+## After pushing my worklog: my branch is up to date with GitHub. worklog-kimiya.txt is now tracked. worklog.txt is an extra file created by mistake (wrong file name), so I did not add it.
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Note: I organized my log once on the GitHub website (branch kimiya), then copied it back to my Mac with git checkout. From now on I edit it only locally.
+------------------------------------------------------------------------------------------------
+#---- Session 4a: git restore--------------
+
+#4a: Protocol.md is modified with my deliberately wrong line (not staged), as expected. 
+
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   worklog-kimiya.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+	modified:   worklog-kimiya.txt
+
+-----------------------------------------------------------------------------------------------
+#After adding a wrong line, protocol.md is modified(not staged). I ran git restore protocol.md to throwaway the wrong line. After typing the code git restore, protocol.md is no longer listed. So, it is clean again. 
+
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   worklog-kimiya.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+	modified:   worklog-kimiya.txt
+------------------------------------------------------------------------------------------------
+#4a: After typing git restore, protocol.md is no longer listed, so it is clean again. Only my log file appears, which is normal.
+
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   worklog-kimiya.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   worklog-kimiya.txt
+-----------------------------------------------------------------------------------------------
+# --- Section 4b: git reset ---
+
+#4b: I made a small edit(I put test) in protocol.md, staged it and I made a throwaway commit(bc33bc2). It includes two files because my log was still staged.  
+
+[main bc33bc2] test:throwaway commit
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 154 insertions(+), 1 deletion(-)
+-----------------------------------------------------------------------------------------------
+# 4b:  Type the the code: git log --oneline | tee -a worklog-kimiya.txt : Shows my throwaway commit ((bc33bc2) on top of the history.  
+
+bc33bc2 test:throwaway commit
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+------------------------------------------------------------------------------------------------
+#4b: The comment and result of this code added manually: git reset HEAD~1 removed my throwaway commit((bc33bc2) from history. The changes went back to unstated: M=modified (protocol.md and my log).
+
+M	protocol.md
+M	worklog-kimiya.txt 
+------------------------------------------------------------------------------------------------
+
+#4b: After git reset, git status shows protocol.md, as modified but not staged. Nothing is staged anymore.   
+
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+	modified:   worklog-kimiya.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+------------------------------------------------------------------------------------------------
+#4b: After typing the code git restore protocol.md is clean again. The throw away commit is gone and the edit is removed
+
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   worklog-kimiya.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	kimiya.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+------------------------------------------------------------------------------------------------
+## 4c: pull refused (my log had local changes that GitHub's new commit would overwrite). Fixed with a backup copy, then pulled successfully.
+
+From https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+ * branch            main       -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	worklog-kimiya.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 76b643d..32d91ff
+-----------------------------------------------------------------------------------------------
+## 4c: I used git show --stat origin/main to check the new commit on GitHub (32d91ff). It was my own edit on the GitHub website: I added 13 lines (my clone log) to worklog-kimiya.txt.
+
+commit 32d91ffc329a11e6e011368e444a511237fea50a (origin/main, origin/HEAD)
+Author: Kimiya YOUNESI <kimiya.younesi@supbiotech.fr>
+Date:   Thu Oct 29 22:44:51 2026 +0100
+
+    Add cloning log for CELIK_YOUNESI_GARCIA repository
+    
+    Documented the process of cloning a repository into 'CELIK_YOUNESI_GARCIA'.
+
+ worklog-kimiya.txt | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+------------------------------------------------------------------------------------------------
+# 4c fix (added by hand): my pull was refused, so I:
+# 1) cp: made a backup copy of my log(cp worklog-kimiya.txt ~/worklog-backup.txt)
+
+# 2) git restore: removed my local log changes so git could pull( git restore worklog-kimiya.txt)
+
+# 3) git pull: Fast-forward, my Mac moved to GitHub's latest commit (32d91ff), no conflict
+
+(git pull origin main)
+
+Fast-forward means git simply moved your Mac forward to GitHub’s latest commit
+
+# 4) cp: copied my full log back from the backup
+
+(cp ~/worklog-backup.txt worklog-kimiya.txt)
+
+
+#Now after all of the modifications on the code above, pull succeeded (Fast-Forward): My Mac moved to 32d91ff and received 13 clone lines I had added to my log on Github. 
+
+From https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+ * branch            main       -> FETCH_HEAD
+Updating 76b643d..32d91ff
+Fast-forward
+ worklog-kimiya.txt | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+------------------------------------------------------------------------------------------------
+# Up to date with origin/main after the fix. worklog-kiiya.txt and kimiya.txt were created by typos; I removed them.
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   worklog-kimiya.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	kimiya.txt
+	worklog-kiiya.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+------------------------------------------------------------------------------------------------
+## git status: up to date with origin/main. Only my log is modified. kimiya.txt and worklog-kiiya.txt are extra files created by typos (not part of the exercise), so I deleted them afterwards.
+
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   worklog-kimiya.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	kimiya.txt
+	worklog-kiiya.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+-----------------------------------------------------------------------------------------------
+#The comments and the code that I used here added manually( I have chosen cat worklog-kiiya.txt >> workload-kimiya.txt : which means I added the out put of the worklog-kiiya.txt to the worklog-kimiya.txt and then I removed the Kiiya work log(rm worklog-kiiya.txt).
+
+----------------------------------------------------------------------------------------------- 
+# git status: up to date with origin/main. The wrong file worklog-kiiya.txt is gone. kimiya.txt (empty, created by mistake) is still there, so I delete it next.
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   worklog-kimiya.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	kimiya.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+------------------------------------------------------------------------------------------------
+#--- Session 4c: revert---
+
+#4c: I have used the code git log --oneline | tee -a worklog-kimiya.txt to find the hashes that are already pulled from the main branch.
+
+# I picked up my own session 2 Team notes commits.
+
+# 698cb03: Add Team notes from k-younesi(My first Team notes line)
+# d53f4f6: (update team note): My update of that line.
+
+These are already mine and already shared on origin/main. So, I will undo them safetely with git revert. 
+
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+
+-----------------------------------------------------------------------------------------------
+#4c: Below the output of the code git push origin main 2>&1 | worklog-kimiya.txt:
+
+#4c: I pushed my two revert commits to Git hub. 32d91ff..5feab9f  main -> main. main means my push accepted , and the reverts are shared with my team.
+
+#32d91ff..5feab9f: This part means that the git commits went from my last commit to the revert commit on Github. 
+
+To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
+   32d91ff..5feab9f  main -> main
+---------------------------------------------------------------------------------------------
+#4c: git log shows my two revert commits in the history(5feab9f and 17757c8) ontop, and my original commits are still in the history(698cb03 and d53f4f6). Revert added new commits instead of rewriting the history.
+
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+-----------------------------------------------------------------------------------------------
+# 4c: after using the code git revert and by cheking the protocol.md file, we will not see my own comments on that file anymore because  revert code removed them.
+
+# CRISPR Knockout Screening Protocol
+
+**Status:** Draft v1
+
+## Overview
+Protocol for generating single-gene knockouts in HEK293 cells using
+CRISPR-Cas9 ribonucleoprotein (RNP) delivery, for downstream phenotypic
+screening.
+
+## Reagents
+- Cas9 protein (NLS-tagged)
+- Synthetic sgRNA (target-specific)
+- Electroporation buffer
+- HEK293 cells, passage < 20
+
+## Steps
+1. Design and order sgRNA targeting exon 2 of the gene of interest.
+2. Complex Cas9 protein with sgRNA at a 1:1.2 molar ratio, incubate 10 min RT.
+3. Electroporate RNP complex into 2x10^5 cells per reaction.
+4. Recover cells in antibiotic-free media for 48h.
+5. Validate editing efficiency by amplicon sequencing.
+
+## Team Notes
+<!-- add your own line below, one per teammate --> clkaze08: test.note.test
+------------------------------------------------------------------------------------------------
+#4c: I added my Team Notes line back in protocol.md and made a fresh commit (eb798d2), so Section 2's work is not lost. 
+
+[main eb798d2] feat:re-add team notes from kyounesi
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+)
+------------------------------------------------------------------------------------------------
+#4c: I pushed my fresh Team Notes commit (eb798d2). 5feab9f..eb798d2 main -> main means my line is back on GitHub.
+ 
+To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
+   5feab9f..eb798d2  main -> main
+------------------------------------------------------------------------------------------------
+#5. # --- Section 5: Identifying commits ---
+
+## 5. By typing the git log we will see the full history of who did what, when, type of the commit, data, the name of Author, and hash etc.
+
+commit eb798d2826135138a722ad4e59c2aed5562be625
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Sun Nov 1 14:52:33 2026 +0100
+
+    feat:re-add team notes from kyounesi
+
+commit 5feab9fead3566b1b8e76d10ac652555a81c6995
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Sun Nov 1 12:53:00 2026 +0100
+
+    Revert "feat: add team notes from kyounesi"
+    
+    This reverts commit 698cb0385a5bac36ccb04e4e7fc4c1c1e434ab00.
+
+commit 17757c85108b7cb8cdc5356ead8cc3a9e5ff8d1c
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Sun Nov 1 12:46:14 2026 +0100
+
+    Revert "docs:update team note"
+    
+    This reverts commit d53f4f6e2e9dd0185a59cffc0d7a3fc313a0aa4c.
+
+commit 32d91ffc329a11e6e011368e444a511237fea50a
+Author: Kimiya YOUNESI <kimiya.younesi@supbiotech.fr>
+Date:   Thu Oct 29 22:44:51 2026 +0100
+
+    Add cloning log for CELIK_YOUNESI_GARCIA repository
+    
+    Documented the process of cloning a repository into 'CELIK_YOUNESI_GARCIA'.
+
+commit 76b643d986597c341649d60feb4917fc9694f8d7
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Thu Oct 29 22:05:48 2026 +0100
+
+    docs:add worklog from kyounesi
+
+commit d53f4f6e2e9dd0185a59cffc0d7a3fc313a0aa4c
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Thu Oct 29 21:41:21 2026 +0100
+
+    docs:update team note
+
+commit 698cb0385a5bac36ccb04e4e7fc4c1c1e434ab00
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Thu Oct 29 18:56:48 2026 +0100
+
+    feat: add team notes from kyounesi
+
+commit 6819f67173d96c84327abe0aaec828e1a2c1c036
+Author: clkaze08 <ayse-zehra.celik@supbiotech.fr>
+Date:   Thu Sep 24 13:20:20 2026 +0200
+
+    feat: add team note from clkaze08
+
+commit dc29fe9b1a2b32b81efa6302365e46ca24e973f7
+Author: clkaze08 <ayse-zehra.celik@supbiotech.fr>
+Date:   Thu Sep 24 13:12:44 2026 +0200
+
+    testtestest
+
+commit f09bb0d6feb082c5e87c1240853c01347919ee62
+Author: clkaze08 <ayse-zehra.celik@supbiotech.fr>
+Date:   Thu Sep 24 12:21:25 2026 +0200
+
+    feat: update protocol
+
+commit 24387415829ccb96728b1ea853d2fb30c035b000
+Author: clkaze08 <ayse-zehra.celik@supbiotech.fr>
+Date:   Thu Sep 24 12:07:05 2026 +0200
+
+    feat: add team note from clkaze08
+
+commit 671f0e66adabccbae612287b9db62d1146e1cd51
+Author: Daniel Garcia Loaiza <danielalejandro.garcialoaiza@supbiotech.fr>
+Date:   Thu Sep 24 11:42:23 2026 +0200
+
+    Initial commit
+----------------------------------------------------------------------------------------------
+# 5: git log --oneline shows the full history, one line per commit (hash + message), newest on top:
+
+# eb798d2 - my fresh commit re-adding my Team Notes line (4c)
+# 5feab9f - Revert of my first Team Notes commit 698cb03 (4c)
+# 17757c8 - Revert of my Team Notes update d53f4f6 (4c)
+# 32d91ff - my clone log added to my worklog
+# 76b643d - my worklog added to the repo
+# d53f4f6 - my Team Notes update
+# 698cb03 - my first Team Notes line (Section 2)
+# 6819f67 - classmate's Team Notes commit (clkaze08)
+# dc29fe9 - classmate's test commit
+# f09bb0d - protocol update
+# 2438741 - classmate's first Team Notes commit (clkaze08)
+# 671f0e6 - Initial commit (start of the repo)
+
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+----------------------------------------------------------------------------------------------
+# 5: git show 5feab9f: this Revert commit undoes commit 698cb03. The Team Notes section changes from 7 lines to 4 lines. Lines with (-) are removed: my Team Notes line and empty lines.
+
+#commit eb798d2826135138a722ad4e59c2aed5562be625
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Sun Nov 1 14:52:33 2026 +0100
+
+    feat:re-add team notes from kyounesi
+
+diff --git a/protocol.md b/protocol.md
+index 28b55e7..49c2e1a 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -23,3 +23,7 @@ screening.
+ ## Team Notes
+ <!-- add your own line below, one per teammate --> clkaze08: test.note.test
+ 
++Kyounesi: I reviewed all the project continue to add part two and three and go further
++
++
++
+commit 5feab9fead3566b1b8e76d10ac652555a81c6995
+Author: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Date:   Sun Nov 1 12:53:00 2026 +0100
+
+    Revert "feat: add team notes from kyounesi"
+    
+    This reverts commit 698cb0385a5bac36ccb04e4e7fc4c1c1e434ab00.
+
+diff --git a/protocol.md b/protocol.md
+index 17df581..28b55e7 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -22,7 +22,4 @@ screening.
+ 
+ ## Team Notes
+ <!-- add your own line below, one per teammate --> clkaze08: test.note.test
+-Kyounesi: I reviewed all the project continue to add part two and three and go further
+-
+-
+
+------------------------------------------------------------------------------------------------
+# 5. # 5: for using get diff, first we need to add sth inside of the protocol.md file. Then we can use git diff protocol.md to see the changes of this file.(--- a/protocol.md: shows the file that we had before edit). (+++ b/protocol.md): shows the protocol.md file after edit. our lines changed from 5 to 7 lines( one line changed and one empty line). 
+ 
+diff --git a/protocol.md b/protocol.md
+index 49c2e1a..d4288e1 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -25,5 +25,7 @@ screening.
+ 
+ Kyounesi: I reviewed all the project continue to add part two and three and go further
+ 
++Kyounesi: I want to test for the comment get diff.
++
+
+------------------------------------------------------------------------------------------------ 
+
+#5: In this part first we need to put the code add protocol.md. Then after that, we will put the code git diff --staged | tee -a worklog-kimiya.txt. we can see that every thing is same as the previous comment but the lines had changed from 5 to 9( 2 lines are empty), and it only uses for the staged codes.
+ 
+diff --git a/protocol.md b/protocol.md
+index 49c2e1a..bf5aff7 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -25,5 +25,9 @@ screening.
+ 
+ Kyounesi: I reviewed all the project continue to add part two and three and go further
+ 
++Kyounesi: I want to test for the comment get diff.
++
++Kyounesi: I want to see the changes by using git diff protocol.md
++
+ 
+ -----------------------------------------------------------------------------------------------
+# 5: I kept my git diff practice lines in protocol.md and committed them separately so they are clearly labeled as a test.
+
+[main dc8ea64] test: add git diff practice lines
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+)
+
+-----------------------------------------------------------------------------------------------
+# I pushed my git diff practice commit (dc8ea64 ), and now it is on GitHub.
+
+To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
+   eb798d2..dc8ea64  main -> main
+
+-----------------------------------------------------------------------------------------------
+# 6: git branch shows that I am in feature/kimiya-idea(marked with *), and the main branch stills alongside of it.
+
+Switched to a new branch 'feature/kimiya-idea'
+* feature/kimiya-idea
+  main
+-----------------------------------------------------------------------------------------------
+# On my branch I have added the reagents to the protocol.md file, and then I have commited it(cd8f433).
+
+[feature/kimiya-idea cd8f433] feat: add non-control targeting sgRNA as reagents
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+-----------------------------------------------------------------------------------------------
+#6: I added new branch feature/kimiya-idea to GitHub. the part (new branch with *), means htt we don't have this branch on GitHub before.
+
+remote: 
+remote: Create a pull request for 'feature/kimiya-idea' on GitHub by visiting:        
+remote:      https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA/pull/new/feature/kimiya-idea        
+remote: 
+To https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA.git
+ * [new branch]      feature/kimiya-idea -> feature/kimiya-idea
+
+Everything up-to-date
+
+------------------------------------------------------------------------------------------------
+#6: I switched to the main branch and we can see  that worklog-kimiya.txt is modified(M) and it is uncomitted which is noraml. main is uptodate with main/origin.
+
+Switched to branch 'main'
+M	worklog-kimiya.txt
+Your branch is up to date with 'origin/main'.
+
+------------------------------------------------------------------------------------------------
+#6: on main branch we can not see the modification of the file protocol.md. This means that these modifications already done on the new branch feature/kimiya-idea.
+
+
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   worklog-kimiya.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	kimiya.txt
+	tee
+
+no changes added to commit (use "git add" and/or "git commit -a")
+------------------------------------------------------------------------------------------------
+#6: I switeched back to the feature/kimiya-idea,that inside we can see the edited reagent of the file protocol.md. Inside of it we can see the worklog-kimiya.txt that has been modified(M) and it is normal. I kept the main branch untouched during this session.
+
+Switched to branch 'feature/kimiya-idea'
+M	worklog-kimiya.txt
+------------------------------------------------------------------------------------------------
+#----Session7: Merge vs Rebase(Local only practice)----
+
+#7: After modifying the protocol.md, the git status shows that this file has modified which is completely normal.
+
+On branch feature/kimiya-idea
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+	modified:   worklog-kimiya.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+------------------------------------------------------------------------------------------------
+#7. I commited the little modification that I have done on the file protocol.md, which was adding the viability die to reagents(the commit ID was: 7b338fc]. 1 file changed and three lines added to the file.
+
+[feature/kimiya-idea 7b338fc] feat: I have added viability die to reagents.
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+-----------------------------------------------------------------------------------------------
+#7. git log --oneline main, shows the history of the main branch from latest to the newest commits that we have written in the mina branch. Also,it shows that the two commits (cd8f433, 7b338fc), have not been mentioned here because they were for my own branch(feature/kimiya-idea).
+
+dc8ea64 test: add git diff practice lines
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+ ----------------------------------------------------------------------------------------------
+#7: As we can see here, by typing git log --oneline, we will receive two more commits(7b338fc& cd8f433) that are already exist on my own branch (feature-kimiya.txt)only. That would be the difference between the git log --oneline mian(for the mian branch), and for git log --oneline(only for the feature-kimiya.txt), branch.
+
+7b338fc feat: I have added viability die to reagents.
+cd8f433 feat: add non-control targeting sgRNA as reagents
+dc8ea64 test: add git diff practice lines
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+----------------------------------------------------------------------------------------------
+# 7: git rebase main failed (cannot rebase: You have unstaged changes) because my log file was not committed. I used git rebase --autostash main instead: git set my log changes aside, did the rebase, then put them back. Result: Current branch feature/kimiya-idea is up to date.
+
+Created autostash: 04bde1f
+Current branch feature/kimiya-idea is up to date.
+Applied autostash.
+------------------------------------------------------------------------------------------------
+# 7: The code echo --oneline graph shows the history of all of our commits one after another and with star(*).
+
+* 7b338fc feat: I have added viability die to reagents.
+* cd8f433 feat: add non-control targeting sgRNA as reagents
+* dc8ea64 test: add git diff practice lines
+* eb798d2 feat:re-add team notes from kyounesi
+* 5feab9f Revert "feat: add team notes from kyounesi"
+* 17757c8 Revert "docs:update team note"
+* 32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+* 76b643d docs:add worklog from kyounesi
+* d53f4f6 docs:update team note
+* 698cb03 feat: add team notes from kyounesi
+* 6819f67 feat: add team note from clkaze08
+* dc29fe9 testtestest
+* f09bb0d feat: update protocol
+* 2438741 feat: add team note from clkaze08
+* 671f0e6 Initial commit
+# 7: The code echo --oneline graph shows the history of all of our commits one after another and with star(*).
+------------------------------------------------------------------------------------------------
+
+On branch feature/status-review
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   worklog-kimiya.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.Rhistory
+
+no changes added to commit (use "git add" and/or "git commit -a")
+M	worklog-kimiya.txt
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Updating dc8ea64..3bcf2a1
+Fast-forward
+ protocol.md | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+Auto-merging protocol.md
+CONFLICT (content): Merge conflict in protocol.md
+Automatic merge failed; fix conflicts and then commit the result.
+[main 9ee8966] fix: protocol version fixed
+ Committer: kimiya <kimiya1379@kimiyas-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+9ee8966 fix: protocol version fixed
+fc39ea2 chore: mark status as under review
+3bcf2a1 chore: changed status to draft v2
+8bffd9c feat: added Gold standard and steps in protocol
+6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+bbf0164 feat: add team note from daniel
+7b338fc feat: I have added viability die to reagents.
+cd8f433 feat: add non-control targeting sgRNA as reagents
+dc8ea64 test: add git diff practice lines
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+*   9ee8966 fix: protocol version fixed
+|\  
+| * fc39ea2 chore: mark status as under review
+| * 7b338fc feat: I have added viability die to reagents.
+| * cd8f433 feat: add non-control targeting sgRNA as reagents
+* | 3bcf2a1 chore: changed status to draft v2
+* | 8bffd9c feat: added Gold standard and steps in protocol
+* | 6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+|\| 
+| * dc8ea64 test: add git diff practice lines
+| * eb798d2 feat:re-add team notes from kyounesi
+| * 5feab9f Revert "feat: add team notes from kyounesi"
+| * 17757c8 Revert "docs:update team note"
+* | bbf0164 feat: add team note from daniel
+| | * af78b7f Update worklog-kimiya.txt
+| | * ac551e8 Update worklog-kimiya.txt
+| | * 34eeda3 Update worklog-kimiya.txt
+| | * 180c31f Update worklog-kimiya.txt
+| |/  
+| * 32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+| * 76b643d docs:add worklog from kyounesi
+| * d53f4f6 docs:update team note
+| * 698cb03 feat: add team notes from kyounesi
+| * 6819f67 feat: add team note from clkaze08
+| * dc29fe9 testtestest
+| * f09bb0d feat: update protocol
+| * 2438741 feat: add team note from clkaze08
+|/  
+* 671f0e6 Initial commit
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Updating 9ee8966..091fac0
+Fast-forward
+ worklog-daniel.txt | 245 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 245 insertions(+)
+ create mode 100644 worklog-daniel.txt
