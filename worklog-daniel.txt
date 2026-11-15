@@ -1,0 +1,245 @@
+Daniel work history on GitHub
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main bbf0164] feat: add team note from daniel
+ 1 file changed, 1 insertion(+)
+Auto-merging protocol.md
+Merge made by the 'ort' strategy.
+ protocol.md          |  10 +++++-
+ worklog-clkaze08.txt |   0
+ worklog-kimiya.txt   | 100 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 109 insertions(+), 1 deletion(-)
+ create mode 100644 worklog-clkaze08.txt
+ create mode 100644 worklog-kimiya.txt
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-daniel.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-daniel.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-daniel.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+39b13ea test: reset commit protocol.md
+6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+bbf0164 feat: add team note from daniel
+dc8ea64 test: add git diff practice lines
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+Unstaged changes after reset:
+M	protocol.md
+6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+bbf0164 feat: add team note from daniel
+dc8ea64 test: add git diff practice lines
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+commit 32d91ffc329a11e6e011368e444a511237fea50a
+Author: Kimiya YOUNESI <kimiya.younesi@supbiotech.fr>
+Date:   Thu Oct 29 22:44:51 2026 +0100
+
+    Add cloning log for CELIK_YOUNESI_GARCIA repository
+    
+    Documented the process of cloning a repository into 'CELIK_YOUNESI_GARCIA'.
+
+diff --git a/worklog-kimiya.txt b/worklog-kimiya.txt
+index d6402b3..781604a 100644
+--- a/worklog-kimiya.txt
++++ b/worklog-kimiya.txt
+@@ -1,3 +1,16 @@
++#Added by hand: I ran git clone before creating my log file
++#The result of cloning into 'CELIK_YOUNESI_GARCIA' 
++ 
++Cloning into 'CELIK_YOUNESI_GARCIA'...
++remote: Enumerating objects: 17, done.
++remote: Counting objects: 100% (17/17), done.
++remote: Compressing objects: 100% (12/12), done.
++remote: Total 17 (delta 7), reused 12 (delta 4), pack-reused 0 (from 0)
++Receiving objects: 100% (17/17), 7.47 KiB | 3.73 MiB/s, done.
++Resolving deltas: 100% (7/7), done
++
++
++
+ On branch main
+ Your branch is up to date with 'origin/main'.
+ 
+commit 6819f67173d96c84327abe0aaec828e1a2c1c036
+Author: clkaze08 <ayse-zehra.celik@supbiotech.fr>
+Date:   Thu Sep 24 13:20:20 2026 +0200
+
+    feat: add team note from clkaze08
+
+diff --git a/protocol.md b/protocol.md
+index e460d26..28b55e7 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -21,5 +21,5 @@ screening.
+ 5. Validate editing efficiency by amplicon sequencing.
+ 
+ ## Team Notes
+-<!-- add your own line below, one per teammate --> clkaze08: test note.test
++<!-- add your own line below, one per teammate --> clkaze08: test.note.test
+ 
+* feature/daniel-idea
+  main
+[feature/daniel-idea 8bffd9c] feat: added Gold standard and steps in protocol
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+Your branch is up to date with 'origin/main'.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-daniel.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+* feature/daniel-idea
+  main
+On branch feature/daniel-idea
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-daniel.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+bbf0164 feat: add team note from daniel
+dc8ea64 test: add git diff practice lines
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+8bffd9c feat: added Gold standard and steps in protocol
+6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+bbf0164 feat: add team note from daniel
+dc8ea64 test: add git diff practice lines
+eb798d2 feat:re-add team notes from kyounesi
+5feab9f Revert "feat: add team notes from kyounesi"
+17757c8 Revert "docs:update team note"
+32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+76b643d docs:add worklog from kyounesi
+d53f4f6 docs:update team note
+698cb03 feat: add team notes from kyounesi
+6819f67 feat: add team note from clkaze08
+dc29fe9 testtestest
+f09bb0d feat: update protocol
+2438741 feat: add team note from clkaze08
+671f0e6 Initial commit
+Current branch feature/daniel-idea is up to date.
+* 8bffd9c feat: added Gold standard and steps in protocol
+*   6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+|\  
+| * dc8ea64 test: add git diff practice lines
+| * eb798d2 feat:re-add team notes from kyounesi
+| * 5feab9f Revert "feat: add team notes from kyounesi"
+| * 17757c8 Revert "docs:update team note"
+| * 32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+| * 76b643d docs:add worklog from kyounesi
+| * d53f4f6 docs:update team note
+| * 698cb03 feat: add team notes from kyounesi
+| * 6819f67 feat: add team note from clkaze08
+| * dc29fe9 testtestest
+| * f09bb0d feat: update protocol
+| * 2438741 feat: add team note from clkaze08
+* | bbf0164 feat: add team note from daniel
+|/  
+* 671f0e6 Initial commit
+Your branch is up to date with 'origin/main'.
+Updating 6d9443e..8bffd9c
+Fast-forward
+ protocol.md | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[feature/status-v2 3bcf2a1] chore: changed status to draft v2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Your branch is up to date with 'origin/main'.
+Updating 8bffd9c..3bcf2a1
+Fast-forward
+ protocol.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Updating 3bcf2a1..9ee8966
+Fast-forward
+ protocol.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+*   9ee8966 fix: protocol version fixed
+|\  
+| * fc39ea2 chore: mark status as under review
+| * 7b338fc feat: I have added viability die to reagents.
+| * cd8f433 feat: add non-control targeting sgRNA as reagents
+* | 3bcf2a1 chore: changed status to draft v2
+* | 8bffd9c feat: added Gold standard and steps in protocol
+* | 6d9443e Merge branch 'main' of https://github.com/SupBiotech-MSc2/CELIK_YOUNESI_GARCIA
+|\| 
+| * dc8ea64 test: add git diff practice lines
+| * eb798d2 feat:re-add team notes from kyounesi
+| * 5feab9f Revert "feat: add team notes from kyounesi"
+| * 17757c8 Revert "docs:update team note"
+| * 32d91ff Add cloning log for CELIK_YOUNESI_GARCIA repository
+| * 76b643d docs:add worklog from kyounesi
+| * d53f4f6 docs:update team note
+| * 698cb03 feat: add team notes from kyounesi
+| * 6819f67 feat: add team note from clkaze08
+| * dc29fe9 testtestest
+| * f09bb0d feat: update protocol
+| * 2438741 feat: add team note from clkaze08
+* | bbf0164 feat: add team note from daniel
+|/  
+* 671f0e6 Initial commit
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-daniel.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
